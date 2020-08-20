@@ -30,6 +30,10 @@ jobs:
         git config --global user.name "Package Publisher"        
         git commit -m "Add built files"
         git push --set-upstream origin ${{ env.branch }} --force
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
+      env:
+        TAG_NAME: v${{ env.NBGV_SemVer2 }}
 
   test:
     needs: [build]
