@@ -6,7 +6,7 @@ namespace dotnet_hello_world_action
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Hello {args[0]}!");
+            Console.WriteLine($"Hello, {args[0]}!");
         }
     }
 }
