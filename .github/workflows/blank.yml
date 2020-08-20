@@ -16,6 +16,8 @@ jobs:
 
     - run: dotnet publish -c ${{ env.config }}
 
+    - run: dotnet run bin/${{ env.config }}/netcoreapp3.1/dotnet-hello-world-action.dll
+
     - run: |
         git checkout -b action
         git add bin/${{ env.config }}
