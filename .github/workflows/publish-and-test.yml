@@ -36,7 +36,7 @@ jobs:
         TAG_NAME: v${{ env.NBGV_SemVer2 }}
 
   test:
-    needs: [build]
+    needs: [publish]
     runs-on: ubuntu-latest
 
     steps:
