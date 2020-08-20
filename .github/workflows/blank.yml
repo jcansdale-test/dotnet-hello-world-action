@@ -1,5 +1,6 @@
 env:
   DOTNET_NOLOGO: true
+  config: Release
 
 on:
   push:
@@ -13,8 +14,9 @@ jobs:
 
     - run: dotnet new console
 
-    - run: dotnet publish -c Release
+    - run: dotnet publish -c ${{ env.config }}
 
     - run: |
         git checkout -b action
+        git add bin/${{ env.config }}
         git push --set-upstream origin action
