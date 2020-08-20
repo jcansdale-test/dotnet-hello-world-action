@@ -1,6 +1,7 @@
 env:
   DOTNET_NOLOGO: true
   config: Release
+  branch: v0.1
 
 on:
   push:
@@ -19,15 +20,15 @@ jobs:
     - run: dotnet run bin/${{ env.config }}/netcoreapp3.1/dotnet-hello-world-action.dll
 
     - run: |
-        git checkout -b action
+        git checkout -b ${{ env.branch }}
         git add bin/${{ env.config }}
-        git push --set-upstream origin action --force
+        git push --set-upstream origin ${{ env.branch }} --force
 
   test:
     needs: [build]
     runs-on: ubuntu-latest
 
     steps:
-    - uses: jcansdale-test/dotnet-hello-world-action@action
+    - uses: jcansdale-test/dotnet-hello-world-action@${{ env.branch }}
       with:
         who: World
