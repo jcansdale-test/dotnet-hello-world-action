@@ -1,0 +1,13 @@
+name: 'Hello World'
+description: 'Run Hello Workd using dotnet'
+inputs:
+  who:
+    description: 'Who to say hello to'
+    required: false
+    default: World
+runs:
+  using: "composite"
+  steps: 
+    - run: dotnet run bin/${{ env.config }}/netcoreapp3.1/dotnet-hello-world-action.dll ${{ inputs.who }}
+      env:
+        DOTNET_NOLOGO: true
