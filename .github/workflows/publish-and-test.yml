@@ -29,8 +29,6 @@ jobs:
         git config --global user.email "you@example.com"
         git config --global user.name "Package Publisher"        
         git commit -m "Add built files"
-        git branch -a
-        git fetch
         git replace --graft HEAD $(git rev-parse master) $(git rev-parse origin/${{ env.branch }})
         git push --set-upstream origin ${{ env.branch }} --force
         git tag $TAG_NAME
