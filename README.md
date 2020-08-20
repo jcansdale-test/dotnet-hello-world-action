@@ -5,7 +5,7 @@ This is an example action written using .NET Core and invoked as a [composite ac
 A specific version can be executed like:
 
 ```yml
-    - uses: jcansdale-test/dotnet-hello-world-action@v0.0.0-g00cbea583a
+    - uses: jcansdale-test/dotnet-hello-world-action@v1.0.2
       with:
         who: Moon
 ```        
