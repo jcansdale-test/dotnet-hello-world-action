@@ -31,7 +31,7 @@ jobs:
         git commit -m "Add built files"
         git branch -a
         git fetch
-        git replace --graft HEAD $(git rev-parse origin/HEAD) $(git rev-parse origin/${{ env.branch }})
+        git replace --graft HEAD $(git rev-parse ORIG_HEAD) $(git rev-parse origin/${{ env.branch }})
         git push --set-upstream origin ${{ env.branch }} --force
         git tag $TAG_NAME
         git push origin $TAG_NAME
