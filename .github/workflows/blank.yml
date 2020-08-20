@@ -15,4 +15,6 @@ jobs:
 
     - run: dotnet publish -c Release
 
-    - run: git status
+    - run: |
+        git checkout -b action
+        git push --set-upstream origin action
