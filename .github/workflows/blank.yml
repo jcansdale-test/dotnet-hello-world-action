@@ -22,3 +22,7 @@ jobs:
         git checkout -b action
         git add bin/${{ env.config }}
         git push --set-upstream origin action --force
+
+    - uses: jcansdale-test/dotnet-hello-world-action@action
+      with:
+        who: World
