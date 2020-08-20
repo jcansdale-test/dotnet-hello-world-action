@@ -9,5 +9,6 @@ runs:
   using: "composite"
   steps: 
     - run: dotnet run bin/${{ env.config }}/netcoreapp3.1/dotnet-hello-world-action.dll ${{ inputs.who }}
+      shell: bash
       env:
         DOTNET_NOLOGO: true
