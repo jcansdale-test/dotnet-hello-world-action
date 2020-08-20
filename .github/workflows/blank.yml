@@ -23,6 +23,10 @@ jobs:
         git add bin/${{ env.config }}
         git push --set-upstream origin action --force
 
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
     - uses: jcansdale-test/dotnet-hello-world-action@action
       with:
         who: World
