@@ -24,6 +24,7 @@ jobs:
         git push --set-upstream origin action --force
 
   test:
+    needs: [build]
     runs-on: ubuntu-latest
 
     steps:
