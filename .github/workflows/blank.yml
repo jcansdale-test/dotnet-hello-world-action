@@ -29,6 +29,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: jcansdale-test/dotnet-hello-world-action@${{ env.branch }}
+    - uses: jcansdale-test/dotnet-hello-world-action@v0.1
       with:
         who: World
