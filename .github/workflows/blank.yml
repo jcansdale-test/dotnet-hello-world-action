@@ -22,6 +22,8 @@ jobs:
     - run: |
         git checkout -b ${{ env.branch }}
         git add bin/${{ env.config }}
+        git config --global user.email "you@example.com"
+        git config --global user.name "Package Publisher"        
         git commit -m "Add built files"
         git push --set-upstream origin ${{ env.branch }} --force
 
