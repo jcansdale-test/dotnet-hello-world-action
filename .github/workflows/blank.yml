@@ -32,4 +32,4 @@ jobs:
     steps:
     - uses: jcansdale-test/dotnet-hello-world-action@v0.1
       with:
-        who: World
+        who: Moon
