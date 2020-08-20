@@ -1,7 +1,7 @@
 env:
   DOTNET_NOLOGO: true
   config: Release
-  branch: v0.1
+  branch: action
 
 on:
   push:
@@ -12,6 +12,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
+
+    - uses: dotnet/nbgv@v0.3.1
+      with:
+        setAllVars: true
 
     - run: dotnet publish -c ${{ env.config }}
 
@@ -30,6 +36,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: jcansdale-test/dotnet-hello-world-action@v0.1
+    - uses: jcansdale-test/dotnet-hello-world-action@action
       with:
         who: Moon
