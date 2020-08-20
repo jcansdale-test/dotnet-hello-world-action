@@ -30,6 +30,7 @@ jobs:
         git config --global user.name "Package Publisher"        
         git commit -m "Add built files"
         git replace --graft HEAD $(git rev-parse master) $(git rev-parse origin/${{ env.branch }})
+        git filter-branch HEAD
         git push --set-upstream origin ${{ env.branch }} --force
         git tag $TAG_NAME
         git push origin $TAG_NAME
