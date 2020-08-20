@@ -7,7 +7,7 @@ A specific version can be executed like:
 ```yml
     - uses: jcansdale-test/dotnet-hello-world-action@v1.0.2
       with:
-        who: Moon
+        who: Earth
 ```        
 
 The latest version can be executed like:
