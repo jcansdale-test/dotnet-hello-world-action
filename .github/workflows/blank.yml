@@ -13,8 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - run: dotnet new console
-
     - run: dotnet publish -c ${{ env.config }}
 
     - run: dotnet run bin/${{ env.config }}/netcoreapp3.1/dotnet-hello-world-action.dll
