@@ -1,0 +1,18 @@
+env:
+  DOTNET_NOLOGO: true
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: dotnet new console
+
+    - run: dotnet compile
+
+    - run: git status
