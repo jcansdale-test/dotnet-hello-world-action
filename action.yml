@@ -1,5 +1,5 @@
 name: 'Hello World'
-description: 'Run Hello Workd using dotnet'
+description: 'Run .NET Core Hello World app!'
 inputs:
   who:
     description: 'Who to say hello to'
