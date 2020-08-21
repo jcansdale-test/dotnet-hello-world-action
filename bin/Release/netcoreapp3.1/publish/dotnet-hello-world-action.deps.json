@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "dotnet-hello-world-action/1.0.23": {
+      "dotnet-hello-world-action/1.0.24": {
         "dependencies": {
           "Nerdbank.GitVersioning": "3.2.31"
         },
@@ -18,7 +18,7 @@
     }
   },
   "libraries": {
-    "dotnet-hello-world-action/1.0.23": {
+    "dotnet-hello-world-action/1.0.24": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
