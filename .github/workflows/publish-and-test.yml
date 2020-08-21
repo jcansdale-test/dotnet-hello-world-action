@@ -23,6 +23,7 @@ jobs:
 
     - run: |
         git checkout -b ${{ env.branch }}
+        git reset origin/${{ env.branch }}
         git add bin/${{ env.config }}/netcoreapp3.1/publish
         git config --global user.email "you@example.com"
         git config --global user.name "Package Publisher"
