@@ -26,11 +26,10 @@ jobs:
     - run: |
         git checkout -b ${{ env.branch }}
         git add bin/${{ env.config }}
+        git reset origin/${{ env.branch }}
         git config --global user.email "you@example.com"
-        git config --global user.name "Package Publisher"        
+        git config --global user.name "Package Publisher"
         git commit -m "Add built files"
-        git replace --graft HEAD $(git rev-parse origin/${{ env.branch }})
-        git filter-branch HEAD
         git push --set-upstream origin ${{ env.branch }} --force
         git tag $TAG_NAME
         git push origin $TAG_NAME
