@@ -8,7 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps: 
-    - run: dotnet exec ${{ github.action_path }}/bin/${{ env.config }}/netcoreapp3.1/publish/dotnet-hello-world-action.dll ${{ inputs.who }}
+    - run: dotnet exec ${{ github.action_path }}/bin/Release/netcoreapp3.1/publish/dotnet-hello-world-action.dll ${{ inputs.who }}
       shell: bash
       env:
         DOTNET_NOLOGO: true
